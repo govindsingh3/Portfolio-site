@@ -10,6 +10,5 @@ app = Flask(__name__, template_folder=template_dir, static_folder=static_dir)
 def index():
     return render_template('index.html')
 
-# Required by Vercel
 def handler(environ, start_response):
     return app.wsgi_app(environ, start_response)
